@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paint.gui.PaintController">
+   <center>
+      <Pane fx:id="board" onMousePressed="#startDrag" onMouseReleased="#endDrag" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></Pane>
+   </center>
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="selectionStuff">
+               <children>
+                  <ColorPicker fx:id="colorChoice" />
+                  <RadioButton fx:id="penButton" mnemonicParsing="false" selected="true" text="Pen">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="drawingTool" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="lineButton" mnemonicParsing="false" text="Line" toggleGroup="$drawingTool" />
+                  <RadioButton fx:id="circleButton" mnemonicParsing="false" text="Circle" toggleGroup="$drawingTool" />
+                  <RadioButton fx:id="rectangleButton" mnemonicParsing="false" text="Rectangle" toggleGroup="$drawingTool" />
+                  <RadioButton fx:id="fillButton" mnemonicParsing="false" text="Fill" toggleGroup="$drawingTool" />
+                  <Slider fx:id="strokeSlider" majorTickUnit="25.0" max="50.0" min="1.0" minorTickCount="5" showTickMarks="true" snapToTicks="true" value="1.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <top>
+      <MenuBar fx:id="menuStuff" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuOpen" mnemonicParsing="false" text="Open">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+              <MenuItem fx:id="menuSave" mnemonicParsing="false" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem fx:id="menuUndo" mnemonicParsing="false" onAction="#undo" text="Undo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuRedo" mnemonicParsing="false" onAction="#redo" text="Redo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator></MenuItem>
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

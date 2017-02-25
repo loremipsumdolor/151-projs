@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Paint" textAlignment="CENTER">
+               <font>
+                  <Font name="System" size="32.0" />
+               </font>
+            </Label>
+            <Label text="Version 1.0" />
+            <Label text="(c) 2016 Jacob Turner" />
+            <Label text="and Lincoln Fischer" />
+            <Separator />
+            <Label text="For CSCI 151, Spring 2016" />
+            <Label text="Hendrix College" />
+            <Label text="Dr. Mark Goadrich" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

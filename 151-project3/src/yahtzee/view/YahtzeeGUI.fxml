@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yahtzee.view.YahtzeeController">
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Aces: " />
+                                    <Label fx:id="aces" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Twos: " />
+                                    <Label fx:id="twos" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Threes: " />
+                                    <Label fx:id="threes" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Fours: " />
+                                    <Label fx:id="fours" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Fives: " />
+                                    <Label fx:id="fives" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Sixes: " />
+                                    <Label fx:id="sixes" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Bonus: " />
+                                    <Label fx:id="bonus" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Separator />
+                        <HBox>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Three-of-a-Kind: " />
+                                    <Label fx:id="threeOfAKind" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Four-of-a-Kind: " />
+                                    <Label fx:id="fourOfAKind" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Full House: " />
+                                    <Label fx:id="fullHouse" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Small Straight: " />
+                                    <Label fx:id="smallStraight" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Large Straight: " />
+                                    <Label fx:id="largeStraight" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Yahtzee: " />
+                                    <Label fx:id="yahtzee" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator orientation="VERTICAL">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin></Separator>
+                              <HBox>
+                                 <children>
+                                    <Label text="Chance: " />
+                                    <Label fx:id="chance" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL">
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Separator>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label text="Upper Total: " />
+                              <Label fx:id="upperTotal" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" text="Lower Total: " textAlignment="RIGHT" />
+                              <Label fx:id="lowerTotal" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" text="Grand Total: " textAlignment="RIGHT" />
+                              <Label fx:id="grandTotal" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <BorderPane fx:id="borderDieOne">
+                     <center>
+                        <ImageView fx:id="dieOne" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#setDieOneHold" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="borderDieTwo">
+                     <center>
+                        <ImageView fx:id="dieTwo" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#setDieTwoHold" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="borderDieThree">
+                     <center>
+                        <ImageView fx:id="dieThree" fitHeight="150.0" fitWidth="150.0" onMouseDragged="#setDieThreeHold" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="borderDieFour">
+                     <center>
+                        <ImageView fx:id="dieFour" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#setDieFourHold" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="borderDieFive">
+                     <center>
+                        <ImageView fx:id="dieFive" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#setDieFiveHold" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Label text="Score: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="score" text="0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin></Separator>
+                  <Button fx:id="rollButton" mnemonicParsing="false" onMouseClicked="#rollDice" text="Roll" />
+                  <Separator orientation="VERTICAL" />
+                  <Button fx:id="nextButton" disable="true" mnemonicParsing="false" onMouseClicked="#nextGame" text="Next" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox alignment="BOTTOM_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Yahtzee" textAlignment="CENTER">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" text="by Jacob Turner" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_CENTER" text="Score">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox>
+               <children>
+                  <Label text="Player 1: " />
+                  <Label fx:id="p1Score" text="0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Player 2: " />
+                  <Label fx:id="p2Score" text="0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

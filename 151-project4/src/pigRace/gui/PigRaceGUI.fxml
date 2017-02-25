@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pigRace.gui.PigRaceController">
+   <center>
+      <VBox prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Ellipse fx:id="pig1" fill="BLACK" radiusX="50.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="pig2" fill="BLACK" radiusX="50.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="pig3" fill="BLACK" radiusX="50.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="The Pig Race" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Separator>
+            <Label text="Choose a pig:" />
+            <ChoiceBox fx:id="pigChoice" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Separator>
+            <Label text="Bet: " />
+            <Slider fx:id="betSlider" showTickLabels="true" showTickMarks="true" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Separator>
+            <Button fx:id="raceButton" mnemonicParsing="false" onMouseClicked="#race" text="Race" />
+            <Button fx:id="resetButton" mnemonicParsing="false" onMouseClicked="#reset" text="Reset" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Separator>
+            <Label text="Score: " />
+            <Label fx:id="score" text="0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
